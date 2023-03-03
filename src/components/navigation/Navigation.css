@@ -3,6 +3,12 @@ nav {
 	justify-content: space-between;
 	padding: 1rem;
 	gap: 1rem;
+	position: fixed;
+	top: 115px;
+	right: 0;
+	left: 0;
+	background-color: #bfdfff;
+	z-index: 1;
 }
 
 input[type="search"] {

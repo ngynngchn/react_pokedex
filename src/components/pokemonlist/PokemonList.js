@@ -26,12 +26,12 @@ const PokemonList = () => {
 	/* console.log(poks.results) */
 
 	return (
-		<>
+		<div className="pokemonList">
 			{poks &&
 				poks.results.map((pok) => {
 					return <PokemonArticle key={uuidv4()} name={pok.name} />;
 				})}
-		</>
+		</div>
 	);
 };
 

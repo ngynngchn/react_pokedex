@@ -28,9 +28,9 @@ h3 {
 	-webkit-text-stroke: 1px #2c72b8;
 }
 
-h4{
+h4 {
 	font-family: "Roboto Black", serif;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding: 5px 30px;
 	border-radius: 10px;
 }
@@ -41,8 +41,8 @@ p {
 	border-radius: 20px;
 }
 
-body{
-	background-color: #CCDADD;
+body {
+	background-color: #ccdadd;
 }
 
 /* für den dark-Mode */
