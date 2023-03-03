@@ -1,3 +1,6 @@
+//library import
+import { Link } from "react-router-dom"; 
+
 // CSS import
 import "./PokemonArticle.css";
 

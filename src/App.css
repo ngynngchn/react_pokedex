@@ -28,9 +28,16 @@ h3 {
 	-webkit-text-stroke: 1px #2c72b8;
 }
 
+h4{
+	font-family: "Roboto Black", serif;
+	color: #FFFFFF;
+	padding: 5px 30px;
+	border-radius: 10px;
+}
+
 p {
 	font-family: "Roboto Regular", serif;
-	/* background: linear-gradient(#ffe1c6, #ffcb05); */
+	background: linear-gradient(#ffe1c6, #ffcb05);
 	border-radius: 20px;
 }
 

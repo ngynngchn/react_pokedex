@@ -22,9 +22,6 @@ const DetailsPage = () => {
 		})
 	}, []);
 
-/* Kann später wieder raus */
-console.log(pokemon)
-
 	return (
 	<main>
 		<Navigation/>
