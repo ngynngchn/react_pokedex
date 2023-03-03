@@ -6,7 +6,7 @@ import menuIcon from "../../../images/menu.svg";
 
 const HamburgerButton = (props) => {
 	return (
-		<input type="image" src={menuIcon} alt="menu" onClick={props.handleclick} />
+		<input type="image" src={menuIcon} alt="menu" onClick={props.handleClick} />
 	);
 };
 

@@ -7,17 +7,32 @@ import { useState } from "react";
 
 // import von Pokeminfilter hier, da es von überall zugreifbar sein sollte
 import PokemonFilter from "../components/pokemonfilter/PokemonFilter";
+import { findAllByDisplayValue } from "@testing-library/react";
 
 const Home = () => {
 	const [searchTerm, setSearchTerm] = useState("");
+	const [filter, setFilter] = useState(false);
+
 	// funktion die dann an die PokemonList weitergegeben werden muss
 	function searchPokemon(event) {
 		setSearchTerm(event.target.value);
 	}
 	return (
 		<main className="Home">
-			<PokemonFilter />
-			<Navigation home handleChange={searchPokemon} />
+			{filter ? (
+				<PokemonFilter
+					handleClick={() => {
+						setFilter(false);
+					}}
+				/>
+			) : (
+				""
+			)}
+			<Navigation
+				home
+				handleChange={searchPokemon}
+				handleClick={() => setFilter(true)}
+			/>
 			{/* searchTerm um später dann die Pokemonliste nach dem Pokemon zu filtern
 			 */}{" "}
 			<PokemonList searchTerm={searchTerm} />

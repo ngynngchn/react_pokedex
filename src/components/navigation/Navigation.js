@@ -13,7 +13,11 @@ const Navigation = (props) => {
 
 	return (
 		<nav>
-			{home ? <HamburgerButton /> : <BackButton />}
+			{home ? (
+				<HamburgerButton handleClick={props.handleClick} />
+			) : (
+				<BackButton />
+			)}
 			<label htmlFor="search" hidden>
 				Search Pokemon
 			</label>

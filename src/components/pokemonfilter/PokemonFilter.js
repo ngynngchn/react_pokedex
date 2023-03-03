@@ -11,7 +11,7 @@ import "./PokemonFilter.css";
 // Image import
 import closeButton from "../../images/close.svg";
 
-const PokemonFilter = () => {
+const PokemonFilter = (props) => {
 	console.log(types);
 
 	return (
@@ -19,7 +19,12 @@ const PokemonFilter = () => {
 			<section className="pokemonFilter">
 				<div className="nav">
 					<Header />
-					<input type="image" src={closeButton} alt="close" />
+					<input
+						type="image"
+						src={closeButton}
+						alt="close"
+						onClick={props.handleClick}
+					/>
 				</div>
 				<h2>TYPE</h2>
 				{/* hier iterieren wir durch unser types - array um die einzelnen Types darzustellen */}
