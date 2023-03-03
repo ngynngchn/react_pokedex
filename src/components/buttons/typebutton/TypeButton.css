@@ -2,7 +2,7 @@ input[type="checkbox"] {
 	all: unset;
 }
 
-label {
+.typeButton label {
 	border-radius: 5px;
 	padding: 0.4rem 1rem;
 	display: block;
