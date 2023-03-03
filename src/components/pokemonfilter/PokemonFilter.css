@@ -1,4 +1,4 @@
-.PokemonFilter {
+.pokemonFilter {
 	background-color: #ccdadd;
 	position: absolute;
 	top: 0;
@@ -7,7 +7,7 @@
 	right: 0;
 }
 
-.PokemonFilter .nav {
+.pokemonFilter .nav {
 	display: flex;
 	justify-content: space-between;
 	margin: 1.5rem 1.5rem;
@@ -15,4 +15,11 @@
 
 h2 {
 	text-align: center;
+}
+
+.pokemonFilter article {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 2rem 4rem;
+	gap: 1rem;
 }

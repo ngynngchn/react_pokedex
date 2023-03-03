@@ -5,6 +5,12 @@ input[type="checkbox"] {
 label {
 	border-radius: 5px;
 	padding: 0.4rem 1rem;
+	display: block;
+	text-align: center;
+	border: 1px solid #000;
 	color: white;
-	border: none;
+}
+
+input[type="checkbox"]:checked ~ label {
+	border: 3px solid #000;
 }

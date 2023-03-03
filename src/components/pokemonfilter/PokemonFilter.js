@@ -1,5 +1,5 @@
 //file import
-import data from "../data/data.js";
+import { types } from "../data/data.js";
 
 //components import
 import Header from "../header/Header";
@@ -12,16 +12,25 @@ import "./PokemonFilter.css";
 import closeButton from "../../images/close.svg";
 
 const PokemonFilter = () => {
+	console.log(types);
+
 	return (
 		<>
-			<section className="PokemonFilter">
+			<section className="pokemonFilter">
 				<div className="nav">
 					<Header />
 					<input type="image" src={closeButton} alt="close" />
 				</div>
 				<h2>TYPE</h2>
-				<TypeButton name="GRASS" />{" "}
-				{/* grass ist hier vorerst der platzhalter zum übergeben */}
+				{/* hier iterieren wir durch unser types - array um die einzelnen Types darzustellen */}
+				<article>
+					{types.map((type, index) => {
+						return (
+							<TypeButton name={type.type} color={type.color} key={index} />
+						);
+					})}
+				</article>
+
 				<button className="searchButton">Search</button>
 			</section>
 		</>
