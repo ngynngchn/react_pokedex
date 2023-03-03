@@ -2,6 +2,9 @@
 // Component import
 import PokemonArticle from "../pokemonarticle/PokemonArticle";
 
+//Import npm
+import { v4 as uuidv4 } from 'uuid';
+
 //library imports
 import { useState, useEffect } from "react"
 
@@ -29,9 +32,14 @@ const PokemonList = () => {
 
 	return (
 		<>
-			<PokemonArticle />
-			<PokemonArticle />
-			<PokemonArticle />
+			{poks && poks.results.map((pok) => {
+				return (
+				<PokemonArticle 
+				key= {uuidv4()}
+				/>
+				)
+			}
+			)}
 		</>
 	);
 };

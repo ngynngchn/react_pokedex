@@ -3,7 +3,7 @@ import "./TypeButton.css";
 
 const TypeButton = ({ name, color }) => {
 	return (
-		<div>
+		<div className="typeButton">
 			<input
 				type="checkbox"
 				name={name}
