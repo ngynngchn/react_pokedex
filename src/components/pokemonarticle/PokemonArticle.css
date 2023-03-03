@@ -1,0 +1,10 @@
+.pokemonArticle{
+    background: linear-gradient(45deg, #FFE1C6 0%,#FFCB05 66%);
+    border-radius: 20px;
+}
+
+.pokemonArticle div{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 20px 0 20px;
+}
