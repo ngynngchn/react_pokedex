@@ -1,11 +1,11 @@
-#pokemonDetail{
+.pokemonDetail{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
-#pokemonDetail img{
+.pokemonDetail img{
     z-index: 1;
 }
 

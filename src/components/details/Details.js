@@ -1,3 +1,6 @@
+/* //file import
+import { types } from "../data/data.js"; */
+
 //component import
 import Types from "../type/Types";
 
@@ -10,13 +13,25 @@ const Details = (props) => {
 	let id = props.pokemon.id.toString();
 	id = id.padStart(3,0);
 
+	/* Der Anfangsbuchstabe vom Pokemon soll groß geschrieben sein */
+	let pokemonName = (props.pokemon.name).charAt(0).toUpperCase()+(props.pokemon.name).slice(1);
+
+	let pokemonImg = props.pokemon.sprites.other.dream_world.front_default;
+
 	return (
-		<article id="pokemonDetail">
+		<article className="pokemonDetail">
 			<div className="imgBackground"></div>
-				<img src={props.pokemon.sprites.other.dream_world.front_default} alt={props.pokemon.name} />
-			{/* Der Pokedex Eintrag wird hier angezeigt und der erste Buchstabe vom Namen soll großgeschrieben sein */}
-			<h1>#{id} {(props.pokemon.name).charAt(0).toUpperCase()+(props.pokemon.name).slice(1)}</h1>
-			<Types />
+				<img src={pokemonImg} alt={pokemonName} />
+			<h1>#{id} {pokemonName}</h1>
+			<article className="pokemonType">
+				{/* Hier werden die PokemonTypen(array) an die Komponente Type übergeben */}
+				{props.pokemon.types.map((type,index)=>{
+					return <Types
+					key = {index}
+					typeName = {type.type.name}
+					/>
+				})}
+			</article>
 			<h3>Attack & Movements</h3>
 		</article>
 	);

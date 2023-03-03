@@ -30,7 +30,7 @@ h3 {
 
 p {
 	font-family: "Roboto Regular", serif;
-	background: linear-gradient(#ffe1c6, #ffcb05);
+	/* background: linear-gradient(#ffe1c6, #ffcb05); */
 	border-radius: 20px;
 }
 
