@@ -5,8 +5,11 @@ import "./Navigation.css";
 import HamburgerButton from "../buttons/hamburgerbutton/HamburgerButton";
 import BackButton from "../buttons/backbutton/BackButton";
 
-const Navigation = () => {
-	let home = false;
+// Image import
+import mode from "../../images/mode.svg";
+
+const Navigation = (props) => {
+	let home = props.home;
 
 	return (
 		<nav>
@@ -19,8 +22,9 @@ const Navigation = () => {
 				name="search"
 				id="search"
 				placeholder="Search Pokemon"
+				onChange={props.handleChange}
 			/>
-			<input type="image" src="#" alt="dark/light mode" />
+			<input type="image" src={mode} alt="dark/light mode" />
 			{/* Darkmode react nachschauen */}
 		</nav>
 	);

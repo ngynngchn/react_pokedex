@@ -5,7 +5,7 @@ import PokemonList from "../components/pokemonlist/PokemonList";
 const Home = () => {
 	return (
 		<main className="Home">
-			<Navigation />
+			<Navigation home />
 			<PokemonList />
 		</main>
 	);
