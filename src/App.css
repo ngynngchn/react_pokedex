@@ -3,12 +3,12 @@ font-family: 'Roboto Regular', serif;
 font-family: 'Roboto Black', serif; */
 
 @font-face {
-	font-family: 'Roboto Regular';
+	font-family: "Roboto Regular";
 	src: url(./fonts/Roboto/Roboto-Regular.ttf);
 }
 
 @font-face {
-	font-family: 'Roboto Black';
+	font-family: "Roboto Black";
 	src: url(./fonts/Roboto/Roboto-Black.ttf);
 }
 
@@ -20,28 +20,30 @@ font-family: 'Roboto Black', serif; */
 	box-sizing: border-box;
 }
 
-h1, h2, h3 {
-	font-family: 'Roboto Black', serif;;
-	color: #FFCB05;
-	-webkit-text-stroke: 1px #2C72B8;
+h1,
+h2,
+h3 {
+	font-family: "Roboto Black", serif;
+	color: #ffcb05;
+	-webkit-text-stroke: 1px #2c72b8;
 }
 
-p{
-	font-family: 'Roboto Regular', serif;
-	background: linear-gradient( #FFE1C6,#FFCB05);
+p {
+	font-family: "Roboto Regular", serif;
+	background: linear-gradient(#ffe1c6, #ffcb05);
 	border-radius: 20px;
 }
 
-main{
-	background-color: #CCDADD;
+body {
+	background-color: #ccdadd;
 }
 
 /* für den dark-Mode */
 
-.darkBackground{
+.darkBackground {
 	background: #212121;
 }
 
-.darkArticle{
-	background: linear-gradient( #BFDFFF,#001224);
+.darkArticle {
+	background: linear-gradient(#bfdfff, #001224);
 }
