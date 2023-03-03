@@ -7,7 +7,6 @@ import { useState } from "react";
 
 // import von Pokeminfilter hier, da es von überall zugreifbar sein sollte
 import PokemonFilter from "../components/pokemonfilter/PokemonFilter";
-import { findAllByDisplayValue } from "@testing-library/react";
 
 const Home = () => {
 	const [searchTerm, setSearchTerm] = useState("");
