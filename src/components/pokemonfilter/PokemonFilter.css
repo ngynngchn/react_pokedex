@@ -2,10 +2,10 @@
 	background-color: #ccdadd;
 	position: absolute;
 	top: 0;
-	display: none;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	animation: fly 0.3s ease-in-out;
 }
 
 .pokemonFilter .nav {
@@ -23,4 +23,13 @@ h2 {
 	grid-template-columns: 1fr 1fr;
 	margin: 2rem 4rem;
 	gap: 1rem;
+}
+
+@keyframes fly {
+	from {
+		transform: translateX(-500px);
+	}
+	to {
+		transform: translateX(0);
+	}
 }
