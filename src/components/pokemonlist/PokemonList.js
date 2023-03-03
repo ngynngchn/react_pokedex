@@ -3,43 +3,34 @@
 import PokemonArticle from "../pokemonarticle/PokemonArticle";
 
 //Import npm
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 //library imports
-import { useState, useEffect } from "react"
-
+import { useState, useEffect } from "react";
 
 // CSS import
 import "./PokemonList.css";
 
-
 const PokemonList = () => {
+	const [poks, setPoks] = useState();
 
-	const [ poks, setPoks] = useState()
-
-	useEffect (() => {
+	useEffect(() => {
 		fetch("https://pokeapi.co/api/v2/pokemon")
-		.then (response => response.json())
-		.then (data => {
-			console.log(data)
-			setPoks (data)
-		})
-	}, []
-	);
+			.then((response) => response.json())
+			.then((data) => {
+				console.log(data);
+				setPoks(data);
+			});
+	}, []);
 
-/* console.log(poks.results) */
-
+	/* console.log(poks.results) */
 
 	return (
 		<>
-			{poks && poks.results.map((pok) => {
-				return (
-				<PokemonArticle 
-				key= {uuidv4()}
-				/>
-				)
-			}
-			)}
+			{poks &&
+				poks.results.map((pok) => {
+					return <PokemonArticle key={uuidv4()} name={pok.name} />;
+				})}
 		</>
 	);
 };
