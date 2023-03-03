@@ -2,6 +2,8 @@
 import Navigation from "../components/navigation/Navigation";
 import PokemonList from "../components/pokemonlist/PokemonList";
 
+
+
 const Home = () => {
 	return (
 		<main className="Home">
@@ -12,3 +14,4 @@ const Home = () => {
 };
 
 export default Home;
+
