@@ -28,9 +28,9 @@ h3 {
 	-webkit-text-stroke: 1px #2c72b8;
 }
 
-h4{
+h4 {
 	font-family: "Roboto Black", serif;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding: 5px 30px;
 	border-radius: 10px;
 	margin: 10px;
@@ -47,8 +47,8 @@ a{
 	color: #001224;
 }
 
-.lightBackground{
-	background-color: #CCDADD;
+.lightBackground {
+	background-color: #ccdadd;
 }
 
 /* für den dark-Mode */

@@ -1,9 +1,12 @@
-
-
 header {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding-top:4vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-block: 4vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #bfdfff;
+	z-index: 0;
 }
-
