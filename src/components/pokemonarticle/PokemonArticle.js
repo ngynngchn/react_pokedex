@@ -9,13 +9,13 @@ const PokemonArticle = ({ name, secondFilter }) => {
 	const [pokemon, setPokemon] = useState(null);
 
 	useEffect(() => {
-		/* Richtiger fetch muss noch gemacht werden  */
 		fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
 			.then((response) => response.json())
 			.then((data) => {
 				setPokemon(data);
 			});
-	}, [name]);
+	}, [namename]);
+
 	/* conditional rendering */
 	if (pokemon) {
 		let pokemonImg = pokemon.sprites.other.dream_world.front_default;
@@ -26,6 +26,9 @@ const PokemonArticle = ({ name, secondFilter }) => {
 		let type = pokemon.types.some((type) => type.type.name == secondFilter);
 
 		console.log(secondFilter);
+
+		let pokemonName =
+			pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
 		return (
 			<>
@@ -45,11 +48,11 @@ const PokemonArticle = ({ name, secondFilter }) => {
 				) : (
 					// wenn secondFilter nicht existiert wird ganz normal das pokemon angezeigt
 					<article className="pokemonArticle">
-						<Link to={`${pokemon.name}`} data={pokemon}>
-							<img src={pokemonImg} alt={pokemon.name} width="40%" />
+						<Link to={`${pokemon.name}`}>
+							<img src={pokemonImg} alt={pokemonName} />
 							<div>
 								<p>#{id}</p>
-								<p>{pokemon.name}</p>
+								<p>{pokemonName}</p>
 							</div>
 						</Link>
 					</article>

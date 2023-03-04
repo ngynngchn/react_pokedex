@@ -33,15 +33,21 @@ h4 {
 	color: #ffffff;
 	padding: 5px 30px;
 	border-radius: 10px;
+	margin: 10px;
 }
 
 p {
 	font-family: "Roboto Regular", serif;
-	background: linear-gradient(#ffe1c6, #ffcb05);
-	border-radius: 20px;
+	/* background: linear-gradient(#ffe1c6, #ffcb05);
+	border-radius: 20px; */
 }
 
-body {
+a{
+	text-decoration: none;
+	color: #001224;
+}
+
+.lightBackground {
 	background-color: #ccdadd;
 }
 

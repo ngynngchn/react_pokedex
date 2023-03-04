@@ -1,10 +1,31 @@
 .pokemonArticle{
     background: linear-gradient(45deg, #FFE1C6 0%,#FFCB05 66%);
     border-radius: 20px;
+    width: 150px;
+    height: 120px;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.pokemonArticle a img{
+    position: absolute;
+    width: 55%;
+    top: -15%;
+    left: 25%;
 }
 
 .pokemonArticle div{
     display: flex;
     justify-content: space-between;
-    border-radius: 0 20px 0 20px;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.pokemonArticle div p{
+    background-color: #FFFFFF;
+    padding: 5px 5px;
+    border-radius: 20px;
 }
