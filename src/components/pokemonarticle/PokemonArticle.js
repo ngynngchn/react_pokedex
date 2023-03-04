@@ -18,14 +18,14 @@ const PokemonArticle = ({ name, secondFilter }) => {
 
 	/* conditional rendering */
 	if (pokemon) {
-		let pokemonImg = pokemon.sprites.other.dream_world.front_default;
+		let pokemonImg = pokemon.sprites.other.dream_world.front_default
+			? pokemon.sprites.other.dream_world.front_default
+			: pokemon.sprites.other["official-artwork"].front_default;
 
 		let id = pokemon.id.toString();
 		id = id.padStart(3, "0");
 		// wenn secondFilter existiert, soll im Pokemon Objekt nachgeschaut werden, ob eines der Types == secondFilter ist - > Rückgabewert ist boolean
 		let type = pokemon.types.some((type) => type.type.name == secondFilter);
-
-		console.log(secondFilter);
 
 		let pokemonName =
 			pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
