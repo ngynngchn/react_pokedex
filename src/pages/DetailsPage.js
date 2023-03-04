@@ -20,7 +20,7 @@ const DetailsPage = () => {
 			.then((data) => {
 				setPokemon(data);
 			});
-	}, []);
+	}, [params.pokemon]);
 
 	return (
 		<main>
