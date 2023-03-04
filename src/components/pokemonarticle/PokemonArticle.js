@@ -14,7 +14,7 @@ const PokemonArticle = ({ name, secondFilter }) => {
 			.then((data) => {
 				setPokemon(data);
 			});
-	}, [namename]);
+	}, [name]);
 
 	/* conditional rendering */
 	if (pokemon) {
