@@ -1,3 +1,17 @@
 .pokemonList {
 	margin-top: 200px;
+	overflow: scroll;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	margin-block: 200px 20px;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.container ~ .pokemonList {
+	margin-top: 0;
 }

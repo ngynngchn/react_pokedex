@@ -1,21 +1,15 @@
 // CSS import
 import "./TypeButton.css";
 
-const TypeButton = ({ name, color }) => {
+const TypeButton = ({ name, color, onClick }) => {
 	return (
-		<div className="typeButton">
-			<input
-				type="checkbox"
-				name={name}
-				id={name.toLowerCase()}
-				onClick={() => {
-					console.log("HERE");
-				}}
-			/>
-			<label htmlFor={name} style={{ backgroundColor: color }}>
-				{name}
-			</label>
-		</div>
+		<button
+			className="typeButton"
+			value={name.toLowerCase()}
+			style={{ backgroundColor: color }}
+			onClick={onClick}>
+			{name}
+		</button>
 	);
 };
 

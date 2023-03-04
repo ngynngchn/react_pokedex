@@ -1,16 +1,11 @@
-input[type="checkbox"] {
-	all: unset;
-}
-
-.typeButton label {
+.typeButton {
 	border-radius: 5px;
 	padding: 0.4rem 1rem;
-	display: block;
 	text-align: center;
 	border: 1px solid #000;
-	color: white;
-}
 
-input[type="checkbox"]:checked ~ label {
-	border: 3px solid #000;
+	color: white;
+	font-size: 0.9rem;
+	font-family: "Roboto Black";
+	cursor: pointer;
 }

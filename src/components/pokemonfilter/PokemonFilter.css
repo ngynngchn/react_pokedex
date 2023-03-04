@@ -1,13 +1,16 @@
 .pokemonFilter {
 	background-color: #ccdadd;
-	position: absolute;
+	position: fixed;
+	width: 100vw;
 	top: 0;
 	bottom: 0;
-	left: 0;
 	right: 0;
+
 	animation: fly 0.3s ease-in-out;
 	overflow: hidden;
 	z-index: 10;
+	height: 100vh;
+	text-align: center;
 }
 
 .pokemonFilter .nav {
@@ -25,6 +28,21 @@ h2 {
 	grid-template-columns: 1fr 1fr;
 	margin: 2rem 4rem;
 	gap: 1rem;
+}
+.searchButton {
+	border: 3px solid #2c72b8;
+	font-size: 1.5rem;
+	background-color: #ffcb05;
+	padding: 0.3rem 2rem;
+	border-radius: 10px;
+	color: #2c72b8;
+	font-family: "Roboto Black";
+	width: 180px;
+	cursor: pointer;
+}
+
+.searchButton:hover {
+	transform: translateY(2px);
 }
 
 @keyframes fly {

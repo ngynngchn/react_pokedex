@@ -6,47 +6,72 @@ import PokemonArticle from "../pokemonarticle/PokemonArticle";
 import { v4 as uuidv4 } from "uuid";
 
 //library imports
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 // CSS import
 import "./PokemonList.css";
 
-const PokemonList = () => {
-	const [poks, setPoks] = useState();
+const PokemonList = ({ searchTerm, data, types, secondFilter }) => {
+	// const [poks, setPoks] = useState([]);
 
-	useEffect(() => {
-		fetch("https://pokeapi.co/api/v2/pokemon")
-			.then((response) => response.json())
-			.then((data) => {
-				console.log(data);
-				setPoks(data);
-			});
-	}, []);
+	// useEffect(() => {
+	// 	fetch("https://pokeapi.co/api/v2/pokemon")
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			console.log(data);
+	// 			setPoks(data);
+	// 		});
+	// }, []);
 
-	/* console.log(poks.results) */
+	// console.log("filtered:", pokemonfilter);
+
+	// useEffect(() => {
+	// 	fetch(`https://pokeapi.co/api/v2/pokemon?limit=150&offset=0}`)
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			setPoks(data.results);
+	// 		});
+	// }, []);
+	console.log(searchTerm);
 
 	return (
 		<div className="pokemonList">
-			{poks &&
+			{/* {poks &&
 				poks.results.map((pok) => {
 					return <PokemonArticle key={uuidv4()} name={pok.name} />;
-				})}
+				})} */}
+
+			{!types
+				? data.map((pok) => {
+						if (searchTerm) {
+							if (pok.name.includes(searchTerm.toLowerCase())) {
+								return <PokemonArticle key={uuidv4()} name={pok.name} />;
+							}
+						} else return <PokemonArticle key={uuidv4()} name={pok.name} />;
+				  })
+				: data.map((pok) => {
+						if (searchTerm) {
+							if (pok.pokemon.name.includes(searchTerm.toLowerCase())) {
+								return (
+									<PokemonArticle
+										key={uuidv4()}
+										name={pok.pokemon.name}
+										secondFilter={secondFilter}
+									/>
+								);
+							}
+						} else
+							return (
+								<PokemonArticle
+									key={uuidv4()}
+									name={pok.pokemon.name}
+									secondFilter={secondFilter}
+								/>
+							);
+				  })}
 		</div>
 	);
 };
-
-/* Pokemonlist = (props) => {
-	return (
-		<div>
-		{props.poks.map} ((pok) => {
-
-		}
-		)
-
-	)
-}
-
-*/
 
 export default PokemonList;
 
