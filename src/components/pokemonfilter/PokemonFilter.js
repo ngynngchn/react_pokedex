@@ -34,8 +34,6 @@ const PokemonFilter = (props) => {
 		}
 	}
 
-	console.log(selected);
-
 	return (
 		<>
 			<section className="pokemonFilter">

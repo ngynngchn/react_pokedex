@@ -18,7 +18,7 @@ const FilteredTypePage = () => {
 	function searchPokemon(event) {
 		setSearchTerm(event.target.value);
 	}
-	console.log(selected[1]);
+	console.log("selected", selected && selected[1]);
 	useEffect(() => {
 		if (selected) {
 			fetch(`https://pokeapi.co/api/v2/type/${selected[0]}`)
@@ -35,7 +35,8 @@ const FilteredTypePage = () => {
 			/>
 
 			<div className="container">
-				{selected && selected.map((type) => <Types typeName={type} />)}
+				{selected &&
+					selected.map((type, index) => <Types typeName={type} key={index} />)}
 			</div>
 
 			{filtered && (
