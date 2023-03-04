@@ -7,8 +7,9 @@ nav {
 	top: 115px;
 	right: 0;
 	left: 0;
-	background-color: #ccdadd;
-	z-index: 1;
+	/* background-color: #ccdadd; */
+	background-color: var(--bgColor, #ccdadd);
+	z-index: 200;
 }
 
 input[type="search"] {

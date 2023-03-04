@@ -20,6 +20,10 @@ font-family: 'Roboto Black', serif; */
 	box-sizing: border-box;
 }
 
+body {
+	background-color: #ccdadd;
+}
+
 h1,
 h2,
 h3 {
@@ -42,19 +46,22 @@ p {
 	border-radius: 20px; */
 }
 
-a{
+a {
 	text-decoration: none;
 	color: #001224;
 }
 
 .lightBackground {
-	background-color: #ccdadd;
+	background-color: var(--bgColor);
+	--bgColor: #ccdadd;
+	/* background-color: #ccdadd; */
 }
 
 /* für den dark-Mode */
 
 .darkBackground {
-	background: #212121;
+	background-color: var(--bgColor);
+	--bgColor: #212121;
 }
 
 .darkArticle {
