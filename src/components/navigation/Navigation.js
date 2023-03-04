@@ -9,11 +9,11 @@ import BackButton from "../buttons/backbutton/BackButton";
 import mode from "../../images/mode.svg";
 
 const Navigation = (props) => {
-	let home = props.home;
+	let menu = props.menu;
 
 	return (
 		<nav>
-			{home ? (
+			{menu ? (
 				<HamburgerButton handleClick={props.handleClick} />
 			) : (
 				<BackButton />
