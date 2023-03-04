@@ -9,5 +9,5 @@ header {
 	right: 0;
 
 	background-color: var(--bgColor, #ccdadd);
-	z-index: 100;
+	z-index: 10;
 }

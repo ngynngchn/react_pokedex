@@ -9,7 +9,7 @@ nav {
 	left: 0;
 	/* background-color: #ccdadd; */
 	background-color: var(--bgColor, #ccdadd);
-	z-index: 200;
+	z-index: 20;
 }
 
 input[type="search"] {
