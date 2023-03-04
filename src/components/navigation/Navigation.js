@@ -1,3 +1,6 @@
+//library import
+import { useState } from "react";
+
 // CSS import
 import "./Navigation.css";
 
@@ -10,6 +13,23 @@ import mode from "../../images/mode.svg";
 
 const Navigation = (props) => {
 	let home = props.home;
+
+	/* Für den Darkmode */
+	const [isActive, setActive] = useState(false);
+
+
+	const handleToggle = () => {
+
+		if (isActive){
+			document.querySelector("body").classList.add("lightBackground");
+			document.querySelector("body").classList.remove("darkBackground");
+		}else{
+			document.querySelector("body").classList.add("darkBackground");
+			document.querySelector("body").classList.remove("lightBackground");
+		}
+
+		setActive(!isActive);
+	}
 
 	return (
 		<nav>
@@ -28,7 +48,7 @@ const Navigation = (props) => {
 				placeholder="Search Pokemon"
 				onChange={props.handleChange}
 			/>
-			<input type="image" src={mode} alt="dark/light mode" />
+			<button onClick={handleToggle}>Dark/Lightmode</button>
 			{/* Darkmode react nachschauen */}
 		</nav>
 	);
