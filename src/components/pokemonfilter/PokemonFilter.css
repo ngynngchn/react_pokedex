@@ -1,5 +1,5 @@
 .pokemonFilter {
-	background-color: var(--bgColor);
+	background-color: var(--bgColor, #ccdadd);
 	position: fixed;
 	width: 100vw;
 	top: 0;
