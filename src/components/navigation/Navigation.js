@@ -19,13 +19,23 @@ const Navigation = (props) => {
 
 
 	const handleToggle = () => {
+		let allPokmenArticle = document.querySelectorAll(".pokemonArticle");
 
 		if (isActive){
 			document.querySelector("body").classList.add("lightBackground");
 			document.querySelector("body").classList.remove("darkBackground");
+
+			
+			for (let i = 0; i < allPokmenArticle.length; i++) {
+			allPokmenArticle[i].classList.remove("darkArticle");
+			}
 		}else{
 			document.querySelector("body").classList.add("darkBackground");
 			document.querySelector("body").classList.remove("lightBackground");
+
+			for (let i = 0; i < allPokmenArticle.length; i++) {
+				allPokmenArticle[i].classList.add("darkArticle");
+				}
 		}
 
 		setActive(!isActive);
