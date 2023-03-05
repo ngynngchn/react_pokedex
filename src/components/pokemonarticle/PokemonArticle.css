@@ -6,12 +6,14 @@
     height: 120px;
     margin: 5vh auto;
     position: relative;
+    transition: all 1s ease-in;
 }
 
 /* Für den Darkmode */
 .darkArticle {
 	background: var(--bgGradient);
 	--bgGradient: linear-gradient(#bfdfff, #001224);
+    transition: all 1s ease-in;
 }
 
 .pokemonArticle a img{

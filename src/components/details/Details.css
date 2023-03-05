@@ -16,14 +16,23 @@
 .imgBackground{
 
     top: 100px;
-    background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,203,5,1) 66%);
+    background: var(--bgGradient);
+    --bgGradient: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,203,5,1) 66%);
     width: 220px;
     height: 110px;
     margin: 4vh auto;
     border-radius: 20px;
+    transition: all 1s ease-in;
 }
 
 .pokemonType{
     display: flex;
+}
+
+/* Für den Darkmode */
+.darkImgBackground {
+	background: var(--bgGradient);
+	--bgGradient: linear-gradient(#bfdfff, #001224);
+    transition: all 1s ease-in;
 }
 

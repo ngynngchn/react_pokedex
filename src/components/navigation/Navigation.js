@@ -24,7 +24,7 @@ const Navigation = (props) => {
 		if (isActive){
 			document.querySelector("body").classList.add("lightBackground");
 			document.querySelector("body").classList.remove("darkBackground");
-
+			document.querySelector(".imgBackground").classList.remove("darkImgBackground");
 			
 			for (let i = 0; i < allPokmenArticle.length; i++) {
 			allPokmenArticle[i].classList.remove("darkArticle");
@@ -32,6 +32,7 @@ const Navigation = (props) => {
 		}else{
 			document.querySelector("body").classList.add("darkBackground");
 			document.querySelector("body").classList.remove("lightBackground");
+			document.querySelector(".imgBackground").classList.add("darkImgBackground");
 
 			for (let i = 0; i < allPokmenArticle.length; i++) {
 				allPokmenArticle[i].classList.add("darkArticle");
@@ -58,7 +59,7 @@ const Navigation = (props) => {
 				placeholder="Search Pokemon"
 				onChange={props.handleChange}
 			/>
-			<button onClick={handleToggle}>Dark/Lightmode</button>
+			<button className="darkmodeBtn" onClick={handleToggle}></button>
 			{/* Darkmode react nachschauen */}
 		</nav>
 	);

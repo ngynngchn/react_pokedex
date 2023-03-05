@@ -22,6 +22,7 @@ font-family: 'Roboto Black', serif; */
 
 body {
 	background-color: #ccdadd;
+	transition: all 1s ease-in;
 }
 
 h1,
@@ -55,6 +56,7 @@ a {
 	background-color: var(--bgColor);
 	--bgColor: #ccdadd;
 	/* background-color: #ccdadd; */
+	transition: all 1s ease-in;
 }
 
 /* für den dark-Mode */
@@ -62,8 +64,9 @@ a {
 .darkBackground {
 	background-color: var(--bgColor);
 	--bgColor: #212121;
+	transition: all 1s ease-in;
 }
 
-.darkArticle {
+/* .darkArticle {
 	background: linear-gradient(#bfdfff, #001224);
-}
+} */

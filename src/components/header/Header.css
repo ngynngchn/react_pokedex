@@ -10,4 +10,5 @@ header {
 
 	background-color: var(--bgColor, #ccdadd);
 	z-index: 100;
+	transition: all 1s ease-in;
 }
