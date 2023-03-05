@@ -23,7 +23,7 @@ const DetailsPage = () => {
 	}, [params.pokemon]);
 
 	return (
-		<main>
+		<main className="detailsPage">
 			<Navigation />
 
 			{pokemon ? <Details pokemon={pokemon} /> : <p>Loading</p>}
