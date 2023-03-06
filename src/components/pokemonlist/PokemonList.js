@@ -16,8 +16,6 @@ const PokemonList = ({ searchTerm, data, types, secondFilter, home }) => {
 	const [poks, setPoks] = useState([]);
 	const [offset, setOffset] = useState(0);
 
-	home = home;
-
 	// Define function to fetch more Pokemon data
 	function showMore() {
 		// Send a GET request to the PokeAPI to fetch the next 20 Pokemon data
