@@ -26,3 +26,7 @@ input[type="search"] {
 	border: none;
 	width: 30px;
 }
+
+.darkmodeBtn:hover{
+	cursor: pointer;
+}
