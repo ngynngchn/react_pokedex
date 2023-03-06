@@ -90,7 +90,8 @@ const PokemonList = ({ searchTerm, data, types, secondFilter }) => {
 								} else {
 									pokemonSearch = false;
 								}
-							} else return <PokemonArticle key={uuidv4()} name={pok.name} />;
+							}
+							return <PokemonArticle key={uuidv4()} name={pok.name} />;
 					  })
 					: data.map((pok) => {
 							if (searchTerm) {
@@ -105,17 +106,15 @@ const PokemonList = ({ searchTerm, data, types, secondFilter }) => {
 								} else {
 									pokemonSearch = false;
 								}
-							} else
-								return (
-									<PokemonArticle
-										key={uuidv4()}
-										name={pok.pokemon.name}
-										secondFilter={secondFilter}
-									/>
-								);
+							}
+							return (
+								<PokemonArticle
+									key={uuidv4()}
+									name={pok.pokemon.name}
+									secondFilter={secondFilter}
+								/>
+							);
 					  }))}
-
-			{}
 
 			{!pokemonSearch && (
 				<h5>Sorry we could not find the pokemon you are looking for :( </h5>

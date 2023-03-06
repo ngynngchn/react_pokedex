@@ -25,7 +25,7 @@ const PokemonArticle = ({ name, secondFilter }) => {
 		let id = pokemon.id.toString();
 		id = id.padStart(3, "0");
 		// wenn secondFilter existiert, soll im Pokemon Objekt nachgeschaut werden, ob eines der Types == secondFilter ist - > Rückgabewert ist boolean
-		let type = pokemon.types.some((type) => type.type.name == secondFilter);
+		let type = pokemon.types.some((type) => type.type.name === secondFilter);
 
 		let pokemonName =
 			pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
