@@ -16,7 +16,7 @@ const Home = () => {
 	}
 
 	return (
-		<main className="Home">
+		<main>
 			{filter && (
 				<PokemonFilter
 					handleClick={() => {

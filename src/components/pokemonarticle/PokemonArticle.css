@@ -1,40 +1,39 @@
-.pokemonArticle{
-    background: var(--bgGradient);
-    --bgGradient: linear-gradient(45deg, #FFE1C6 0%,#FFCB05 66%);
-    border-radius: 20px;
-    width: 150px;
-    height: 120px;
-    margin: 5vh auto;
-    position: relative;
-    transition: all 1s ease-in;
+.pokemonArticle {
+	background: var(
+		--bgGradient,
+		linear-gradient(45deg, #ffe1c6 0%, #ffcb05 66%)
+	);
+	/* --bgGradient: linear-gradient(45deg, #FFE1C6 0%,#FFCB05 66%); */
+	border-radius: 20px;
+	width: 150px;
+	height: 120px;
+	margin: 2vh 0;
+	position: relative;
+	transition: all 0.5s ease-in;
 }
 
-/* Für den Darkmode */
-.darkArticle {
-	background: var(--bgGradient);
-	--bgGradient: linear-gradient(#bfdfff, #001224);
-    transition: all 1s ease-in;
+.pokemonArticle a img {
+	position: absolute;
+	width: 55%;
+	max-height: 90%;
+	top: -15%;
+	left: 25%;
 }
 
-.pokemonArticle a img{
-    position: absolute;
-    width: 55%;
-    top: -15%;
-    left: 25%;
+.pokemonArticle div {
+	display: flex;
+	justify-content: space-between;
+	background-color: #ffffff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 0 0 20px 20px;
+	padding: 3px;
+	overflow: hidden;
 }
 
-.pokemonArticle div{
-    display: flex;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.pokemonArticle div p{
-    background-color: #FFFFFF;
-    padding: 5px 5px;
-    border-radius: 20px;
+.pokemonArticle div p {
+	background-color: #ffffff;
+	padding: 5px 5px;
 }

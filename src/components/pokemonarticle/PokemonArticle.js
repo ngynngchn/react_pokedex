@@ -37,7 +37,7 @@ const PokemonArticle = ({ name, secondFilter }) => {
 					type && (
 						<article className="pokemonArticle">
 							<Link to={`${pokemon.name}`} data={pokemon}>
-								<img src={pokemonImg} alt={pokemon.name} width="40%" />
+								<img src={pokemonImg} alt={pokemon.name} />
 								<div>
 									<p>#{id}</p>
 									<p>{pokemon.name}</p>

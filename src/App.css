@@ -22,7 +22,7 @@ font-family: 'Roboto Black', serif; */
 
 body {
 	background-color: #ccdadd;
-	transition: all 1s ease-in;
+	transition: all 0.5s ease-in;
 }
 
 h1,
@@ -54,18 +54,24 @@ a {
 }
 
 .lightBackground {
-	background-color: var(--bgColor);
 	--bgColor: #ccdadd;
+	--bgGradient: linear-gradient(
+		45deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 203, 5, 1) 66%
+	);
+	background-color: var(--bgColor);
 	/* background-color: #ccdadd; */
-	transition: all 1s ease-in;
+	transition: all 0.5s ease-in;
 }
 
 /* für den dark-Mode */
 
 .darkBackground {
-	background-color: var(--bgColor);
 	--bgColor: #212121;
-	transition: all 1s ease-in;
+	--bgGradient: linear-gradient(#bfdfff, #001224);
+	background-color: var(--bgColor);
+	transition: all 0.5s ease-in;
 }
 
 /* .darkArticle {
