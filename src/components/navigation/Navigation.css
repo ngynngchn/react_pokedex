@@ -10,6 +10,7 @@ nav {
 	/* background-color: #ccdadd; */
 	background-color: var(--bgColor, #ccdadd);
 	z-index: 20;
+	transition: all 1s ease-in;
 }
 
 input[type="search"] {
@@ -18,4 +19,14 @@ input[type="search"] {
 	border-radius: 50px;
 	padding: 0.5rem 1rem 0.5rem 1rem;
 	width: 100%;
+}
+
+.darkmodeBtn{
+	background: no-repeat url(../../images/mode.svg);
+	border: none;
+	width: 30px;
+}
+
+.darkmodeBtn:hover{
+	cursor: pointer;
 }
