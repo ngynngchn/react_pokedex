@@ -20,3 +20,20 @@ h5 {
 	text-align: center;
 	margin: 1rem 2rem;
 }
+
+.pokemonFilter p {
+	margin: 1rem 2rem;
+}
+
+.pokemonList button {
+	border: 3px solid #2c72b8;
+	font-size: 1rem;
+	background-color: #ffcb05;
+	padding: 0.3rem 2rem;
+	border-radius: 10px;
+	color: #2c72b8;
+	font-family: "Roboto Black";
+	width: 180px;
+	cursor: pointer;
+	margin-bottom: 1rem;
+}

@@ -58,6 +58,7 @@ const PokemonFilter = (props) => {
 				</div>
 				<h2>TYPE</h2>
 				{/* hier iterieren wir durch unser types - array um die einzelnen Types darzustellen */}
+				<p>You want a pokemon with the selected types (max. 2): </p>
 				<article>
 					{types.map((type, index) => {
 						return (

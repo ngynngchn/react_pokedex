@@ -31,7 +31,7 @@ const Home = () => {
 			/>
 			{/* searchTerm um später dann die Pokemonliste nach dem Pokemon zu filtern
 			 */}
-			<PokemonList searchTerm={searchTerm} />
+			<PokemonList searchTerm={searchTerm} home />
 		</main>
 	);
 };

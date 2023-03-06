@@ -16,7 +16,9 @@ const Details = (props) => {
 	let pokemonName =
 		props.pokemon.name.charAt(0).toUpperCase() + props.pokemon.name.slice(1);
 
-	let pokemonImg = props.pokemon.sprites.other.dream_world.front_default;
+	let pokemonImg = props.pokemon.sprites.other.dream_world.front_default
+		? props.pokemon.sprites.other.dream_world.front_default
+		: props.pokemon.sprites.other["official-artwork"].front_default;
 
 	return (
 		<article className="pokemonDetail">

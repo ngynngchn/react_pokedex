@@ -23,6 +23,8 @@ const FilteredTypePage = () => {
 		if (selected) {
 			fetch(`https://pokeapi.co/api/v2/type/${selected[0]}`)
 				.then((response) => response.json())
+				// Remove unused useEffect() block
+
 				.then((data) => setFilter(data.pokemon));
 		}
 	}, [selected]);
