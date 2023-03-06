@@ -11,44 +11,37 @@ import { useState, useEffect } from "react";
 // CSS import
 import "./PokemonList.css";
 
-const PokemonList = ({ searchTerm, data, types, secondFilter }) => {
+const PokemonList = ({ searchTerm, data, types, secondFilter, children }) => {
 	const [poks, setPoks] = useState([]);
 
-	// useEffect(() => {
-	// 	fetch("https://pokeapi.co/api/v2/pokemon")
-	// 		.then((response) => response.json())
-	// 		.then((data) => {
-	// 			console.log(data);
-	// 			setPoks(data);
-	// 		});
-	// }, []);
 	useEffect(() => {
-		fetch(`https://pokeapi.co/api/v2/generation/1/`)
+		fetch("https://pokeapi.co/api/v2/pokemon")
 			.then((response) => response.json())
 			.then((data) => {
-				setPoks(data.pokemon_species);
+				console.log(data);
+				setPoks(data.results);
 			});
 	}, []);
+	// useEffect(() => {
+	// 	fetch(`https://pokeapi.co/api/v2/generation/1/`)
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			setPoks(data.pokemon_species);
+	// 		});
+	// }, []);
 
 	// Wenn FilteredTypePage auf PokemonList zugrefit, muss ein abgleich geschehen um nur die 1.Generation Pokemon anzugzeigen
-
-	if (data && poks) {
-		console.log("poks", poks);
-		console.log("data", data);
-	}
-
+	let pokemonSearch = true;
 	return (
 		<div className="pokemonList">
-			{/* {poks &&
-					poks.results.map((pok) => {
-						return <PokemonArticle key={uuidv4()} name={pok.name} />;
-					})} */}
 			{poks &&
 				(!types
 					? poks.map((pok) => {
 							if (searchTerm) {
 								if (pok.name.includes(searchTerm.toLowerCase())) {
 									return <PokemonArticle key={uuidv4()} name={pok.name} />;
+								} else {
+									pokemonSearch = false;
 								}
 							} else return <PokemonArticle key={uuidv4()} name={pok.name} />;
 					  })
@@ -62,6 +55,8 @@ const PokemonList = ({ searchTerm, data, types, secondFilter }) => {
 											secondFilter={secondFilter}
 										/>
 									);
+								} else {
+									pokemonSearch = false;
 								}
 							} else
 								return (
@@ -72,6 +67,10 @@ const PokemonList = ({ searchTerm, data, types, secondFilter }) => {
 									/>
 								);
 					  }))}
+
+			{!pokemonSearch && (
+				<h5>Sorry we could not find the pokemon you are looking for :( </h5>
+			)}
 		</div>
 	);
 };

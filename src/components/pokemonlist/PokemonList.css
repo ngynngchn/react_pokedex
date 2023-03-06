@@ -1,10 +1,8 @@
 .pokemonList {
-	margin-top: 200px;
 	overflow: scroll;
 }
 
 .container {
-	margin-block: 200px 20px;
 	display: flex;
 	justify-content: center;
 	gap: 1rem;
@@ -12,4 +10,10 @@
 
 .container ~ .pokemonList {
 	margin-top: 0;
+}
+
+h5 {
+	font-size: 1.5rem;
+	text-align: center;
+	margin: 1rem 2rem;
 }

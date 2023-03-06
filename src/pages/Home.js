@@ -17,14 +17,12 @@ const Home = () => {
 
 	return (
 		<main className="Home">
-			{filter ? (
+			{filter && (
 				<PokemonFilter
 					handleClick={() => {
 						setFilter(false);
 					}}
 				/>
-			) : (
-				""
 			)}
 			<Navigation
 				menu
