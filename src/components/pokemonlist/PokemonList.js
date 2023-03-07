@@ -64,37 +64,37 @@ const PokemonList = ({ searchTerm, data, types, secondFilter, home }) => {
 	return (
 		<div id="pokemonList">
 			{/* Render PokemonArticle components for each Pokemon in poks or data that matches the search term */}
-			<div ref={divRef} className="pokemonList">
-				{poks &&
-					(!types
-						? poks.map((pok) => {
-								if (pok.name.includes(searchTerm.toLowerCase())) {
-									// Set pokemonSearch to true if any Pokemon matches the search term
-									pokemonSearch = true;
-									return <PokemonArticle key={uuidv4()} name={pok.name} />;
-								} else {
-									return null;
-								}
-						  })
-						: data.map((pok) => {
-								if (pok.pokemon.name.includes(searchTerm.toLowerCase())) {
-									// Set pokemonSearch to true if any Pokemon matches the search term
-									pokemonSearch = true;
-									return (
-										<PokemonArticle
-											key={uuidv4()}
-											name={pok.pokemon.name}
-											secondFilter={secondFilter}
-										/>
-									);
-								} else {
-									return null;
-								}
-						  }))}
-			</div>
+			{/* <div ref={divRef} className="pokemonList">
+			</div> */}
+			{poks &&
+				(!types
+					? poks.map((pok) => {
+							if (pok.name.includes(searchTerm.toLowerCase())) {
+								// Set pokemonSearch to true if any Pokemon matches the search term
+								pokemonSearch = true;
+								return <PokemonArticle key={uuidv4()} name={pok.name} />;
+							} else {
+								return null;
+							}
+					  })
+					: data.map((pok) => {
+							if (pok.pokemon.name.includes(searchTerm.toLowerCase())) {
+								// Set pokemonSearch to true if any Pokemon matches the search term
+								pokemonSearch = true;
+								return (
+									<PokemonArticle
+										key={uuidv4()}
+										name={pok.pokemon.name}
+										secondFilter={secondFilter}
+									/>
+								);
+							} else {
+								return null;
+							}
+					  }))}
 
 			{/* Render a message if no Pokemon matches the search term */}
-			{(!pokemonSearch && searchTerm) || empty ? (
+			{!pokemonSearch && searchTerm ? (
 				<h5>Sorry we could not find the pokemon you are looking for :( </h5>
 			) : null}
 
