@@ -6,7 +6,7 @@ import PokemonArticle from "../pokemonarticle/PokemonArticle";
 import { v4 as uuidv4 } from "uuid";
 
 //library imports
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import { React } from "react";
 
