@@ -62,7 +62,7 @@ const PokemonList = ({ searchTerm, data, types, secondFilter, home }) => {
 	let pokemonSearch = false;
 
 	return (
-		<div id="pokemonList">
+		<div className="pokemonList">
 			{/* Render PokemonArticle components for each Pokemon in poks or data that matches the search term */}
 			{/* <div ref={divRef} className="pokemonList">
 			</div> */}
