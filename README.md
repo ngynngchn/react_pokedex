@@ -1,4 +1,4 @@
-Netlify Link: https://app.netlify.com/sites/pokedex-team-three/overview
+Netlify Link: https://pokedex-team-three.netlify.app/
 
 <!-- ================================== -->
 
@@ -22,3 +22,4 @@ was muss noch implementiert/verbessert werden :
 
 - Nachricht, falls keine Pokemon in der Type suche gefunden wurden
 - kein neues rendering beim laden weiterer Pokemon (infinite scroll)
+- Desktopversion
