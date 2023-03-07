@@ -9,7 +9,8 @@
 	animation: fly 0.3s ease-in-out;
 	overflow: hidden;
 	z-index: 30;
-	height: 100vh;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
 	text-align: center;
 }
 
